@@ -46,9 +46,9 @@ class IOCParser:
 
 
     def __init__(self, text):
-        self.text = re.sub(r"\[\.\]",r".", text)
-        self.text = re.sub(r'hxxp',r'http',self.text)
-
+        self.text = re.sub(r"\[\.\]", r".", text)
+        self.text = re.sub(r'hxxp', r'http',self.text)
+        self.text = re.sub(r'\[@\]', r'@', self.text)
 
 
     def parse(self):

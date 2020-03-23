@@ -35,7 +35,7 @@ class IOCParser:
 
 
     ipRegex         = ["IP",        re.compile(r'(([0-9]{1,3}\.){3}[0-9]{1,3})')]
-    uriRegex        = ["uri",       re.compile('\\b((http.:\\/\\/)?[a-zA-Z0-9\\.\\-]{2,}[\\.](?:' + check("tlds") + ')(\\/[\\S]*)*)\\b', re.I)]
+    uriRegex        = ["uri",       re.compile('\\b((http.:\\/\\/)?[a-zA-Z0-9\\.\\-]{2,}[\\.](?:' + check("tlds") + ')(\\/[\\S][^,\"]*)*)\\b', re.I)]
     md5Regex        = ["md5",       re.compile(r'\b(([a-f0-9]{32}\b|\b[A-F0-9]{32}))\b')]
     sha1Regex       = ["sha1",      re.compile(r'\b(([a-f0-9]{40}\b|\b[A-F0-9]{40}))\b')]
     sha256Regex     = ["sha256",    re.compile(r'\b(([0-9a-z]{64}\b|\b[0-9A-Z]{64}))\b')]
